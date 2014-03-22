@@ -8,3 +8,5 @@
 /TPC3/dist/
 *.properties
 *.xml
+/TPC/probe.tpc4/target/
+/TPC4/probe.tpc4/target/
