@@ -6,3 +6,5 @@
 /TPC3/nbproject/private/
 /TPC3/build/
 /TPC3/dist/
+*.properties
+*.xml
