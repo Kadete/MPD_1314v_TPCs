@@ -1,3 +1,8 @@
 /TPC2/build/
 *.jar
 /TPC2/dist/
+/TPC/nbproject/private/
+/TPC/build/
+/TPC3/nbproject/private/
+/TPC3/build/
+/TPC3/dist/
