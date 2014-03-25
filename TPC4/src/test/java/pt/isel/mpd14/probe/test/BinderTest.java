@@ -7,7 +7,7 @@ import java.util.HashMap;
 import java.util.Map;
 import junit.framework.Assert;
 import junit.framework.TestCase;
-import pt.isel.mpd.probe.tpc4.Binder;
+import pt.isel.mpd14.probe.tpc4.Binder;
 import pt.isel.mpd14.probe.test.model.Student;
 import pt.isel.mpd14.probe.test.model.StudentDto;
 

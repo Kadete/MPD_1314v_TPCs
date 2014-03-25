@@ -1,12 +1,10 @@
-/TPC2/build/
 *.jar
+/TPC2/build/
 /TPC2/dist/
 /TPC/nbproject/private/
 /TPC/build/
 /TPC3/nbproject/private/
 /TPC3/build/
 /TPC3/dist/
-*.properties
-*.xml
-/TPC/probe.tpc4/target/
 /TPC4/probe.tpc4/target/
+/TPC4/target/
