@@ -22,6 +22,7 @@ import static pt.isel.mpd14.probe.util.SneakyUtils.throwAsRTException;
 /**
  *
  * @author Miguel Gamboa at CCISEL
+ * @param <T>
  */
 public class BindField<T> implements BindMember<T> {
 
@@ -34,6 +35,7 @@ public class BindField<T> implements BindMember<T> {
                 if (fName.equals(name)) {
                     Class<?> fType = f.getType();
                     f.setAccessible(true);
+                    
                     if (fType.isPrimitive()) {
                         fType = f.get(target).getClass();
                     }

@@ -19,13 +19,12 @@ package pt.isel.mpd14.probe;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 import java.util.HashMap;
-import java.util.LinkedList;
-import java.util.List;
 import java.util.Map;
 import static pt.isel.mpd14.probe.util.SneakyUtils.throwAsRTException;
 
 /**
  * @author Miguel Gamboa at CCISEL
+ * @param <T>
  */
 public class BindProp<T> implements BindMember<T> {
 
@@ -45,7 +44,7 @@ public class BindProp<T> implements BindMember<T> {
             Class<?>[] paramsKlasses = m.getParameterTypes();
             if (paramsKlasses.length != 1) {
                 continue;
-            }
+            }  
             setters.put(m.getName().substring(3).toLowerCase(), m);
         }
     }

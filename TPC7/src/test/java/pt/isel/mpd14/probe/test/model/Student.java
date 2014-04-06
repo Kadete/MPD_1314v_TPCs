@@ -43,8 +43,6 @@ public class Student {
         id = 0;
     }
 
-    
-    
     public Student(int id, Date birthDate, String name, Course course) {
         this.id = id;
         this.birthDate = birthDate;

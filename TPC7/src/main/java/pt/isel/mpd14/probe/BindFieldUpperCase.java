@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2014 Miguel Gamboa at CCISEL
+ * Copyright (C) 2014 Cadete
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -14,16 +14,17 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
+
 package pt.isel.mpd14.probe;
 
 /**
  *
- * @author Miguel Gamboa at CCISEL
+ * @author Cadete
  */
-public class BindFieldNonNull<T> extends BindNonNull<T>{
+public class BindFieldUpperCase<T> extends BindUpperCase<T>{
 
-    public BindFieldNonNull() {
+     public BindFieldUpperCase() {
         super(new BindField());
     }
-
+    
 }

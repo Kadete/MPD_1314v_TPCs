@@ -7,10 +7,10 @@ import java.util.HashMap;
 import java.util.Map;
 import junit.framework.Assert;
 import junit.framework.TestCase;
-import pt.isel.mpd14.probe.Binder;
 import pt.isel.mpd14.probe.BindField;
-import pt.isel.mpd14.probe.BindNonNull;
-import pt.isel.mpd14.probe.BindProp;
+import pt.isel.mpd14.probe.BindFieldUpperCase;
+import pt.isel.mpd14.probe.BindPropUpperCase;
+import pt.isel.mpd14.probe.Binder;
 import pt.isel.mpd14.probe.test.model.Student;
 import pt.isel.mpd14.probe.test.model.StudentDto;
 
@@ -37,7 +37,7 @@ public class BinderTest extends TestCase{
         System.out.println(s2);
         
         Assert.assertEquals(s1.id, s2.id);
-        Assert.assertEquals(s1.getName().toUpperCase(), s2.name);
+        Assert.assertEquals(s1.getName(), s2.name);
         Assert.assertEquals(null, s2.birthDate);
 
     }
@@ -55,7 +55,9 @@ public class BinderTest extends TestCase{
           Act
         */
         // StudentDto s2 = new Binder(new BindFieldNonNull())
-        StudentDto s2 = new Binder<>(StudentDto.class, new BindNonNull<StudentDto>(new BindField()))
+        //StudentDto s2 = new Binder<>(StudentDto.class, new BindNonNull<StudentDto>(new BindField()))
+        //StudentDto s2 = new Binder<>(StudentDto.class, new BindUpperCase<StudentDto>(new BindField()))
+        StudentDto s2 = new Binder<>(StudentDto.class, new BindFieldUpperCase<StudentDto>())
                 .bindTo(v);
         System.out.println(s2);
         /*
@@ -78,7 +80,8 @@ public class BinderTest extends TestCase{
         /*
         Act
         */
-        Student s = new Binder<>(Student.class, new BindProp<>(Student.class))
+        //Student s = new Binder<>(Student.class, new BindProp<>(Student.class))
+        Student s = new Binder<>(Student.class, new BindPropUpperCase<>(Student.class))
                 .bindTo(v);
         /*
         Assert
@@ -99,7 +102,8 @@ public class BinderTest extends TestCase{
         /*
         Act
         */
-        Student s = new Binder<>(Student.class, new BindProp<>(Student.class), new BindField<>())
+        //Student s = new Binder<>(Student.class, new BindProp<>(Student.class), new BindField<>())
+        Student s = new Binder<>(Student.class, new BindPropUpperCase<>(Student.class),new BindFieldUpperCase<>())
                 .bindTo(v);
         /*
         Assert

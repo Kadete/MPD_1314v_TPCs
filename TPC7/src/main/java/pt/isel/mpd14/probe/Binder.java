@@ -21,16 +21,9 @@ public class Binder<T>{
         Field[] fs = o.getClass().getDeclaredFields();
         for (Field f : fs) {
             f.setAccessible(true);
-            res.put(f.getName(), upperCaseString(f.get(o)));
+            res.put(f.getName(), f.get(o));
         }
         return res;
-    }
-
-    private static Object upperCaseString(Object o){
-        if(o != null && o.getClass().equals(String.class)){
-            return o.toString().toUpperCase();        
-        }
-        return o;
     }
     
     public T bindTo(Map<String, Object> vals)
@@ -42,10 +35,9 @@ public class Binder<T>{
             T target = targetKlass.newInstance();
             for (Map.Entry<String, Object> e : vals.entrySet()) {
                 for (BindMember bm : bms) {
-                    if(bm.bind(target, e.getKey(), upperCaseString(e.getValue())))
+                    if(bm.bind(target, e.getKey(), e.getValue()))
                         break;
                 }
-            
             }
             return target;
         } catch (InstantiationException | IllegalAccessException ex) {
@@ -53,7 +45,6 @@ public class Binder<T>{
         }
         throw new IllegalStateException();
     }
-
 }
 
 class WrapperUtilites {
