@@ -1,0 +1,8 @@
+Sobre a aplicação raffle:
+
+	Na class App é feita a operação .forEach(System.out::println) sobre um Stream<Student>. 
+	Explique qual a diferença entre a operação anterior e fazer 
+	.forEach(s -> System.out.println(s)), em termos de resultado da compilação e desempenho.f
+
+	Implemente o método randStudent() da classe Dealer que sorteia um aluno 
+	aleatoriamente com nota superior a 5 e inferior a 20.

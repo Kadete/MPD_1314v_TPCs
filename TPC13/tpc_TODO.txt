@@ -1,0 +1,5 @@
+indentação.
+Adicionar suporte à framework tohtml para:
+
+elementos folha, e.g. img, hr, br, etc.
+indentação.elementos folha, e.g. img, hr, br, etc.
